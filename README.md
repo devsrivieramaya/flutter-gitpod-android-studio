@@ -1,6 +1,10 @@
 # Flutter app template
 The [Flutter](https://flutter.dev/) template, configured for [Gitpod](https://www.gitpod.io) to give you pre-built, ephemeral development environments in the cloud.
 
+FLUTTER VERSION 3.10
+
+JAVA VERSION 11.0.19
+
 ## Next Steps
 
 Click the button below to start a new development environment:
