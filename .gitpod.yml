@@ -25,9 +25,9 @@ tasks:
 
   - name: Install Android Studio
     command: |
-      cd /home/gitpod/Downloads
-      wget https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2022.2.1.19/android-studio-2022.2.1.19-linux.tar.gz
-      tar -xvzf android-studio-2022.2.1.19-linux.tar.gz
+      sudo add-apt-repository ppa:maarten-fonville/android-studio -y
+      sudo apt update
+      sudo apt install android-studio -y
       export ANDROID_HOME=/workspace/android-studio
       export PATH=$PATH:$ANDROID_HOME/bin
 
