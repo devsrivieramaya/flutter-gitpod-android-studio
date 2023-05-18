@@ -9,7 +9,7 @@ tasks:
       sudo apt install android-studio -y
       export ANDROID_HOME=/workspace/android-studio
       export PATH=$PATH:$ANDROID_HOME/bin
-      
+
   - name: Build for different targets
     init: |
       if test ! -e "pubspec.yaml"; then {
@@ -30,8 +30,6 @@ tasks:
       } fi
       flutter pub get
       flutter run
-
-
 
 ports:
   - port: 5900
