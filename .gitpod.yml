@@ -2,6 +2,14 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
+  - name: Install Android Studio
+    command: |
+      sudo add-apt-repository ppa:maarten-fonville/android-studio -y
+      sudo apt update
+      sudo apt install android-studio -y
+      export ANDROID_HOME=/workspace/android-studio
+      export PATH=$PATH:$ANDROID_HOME/bin
+      
   - name: Build for different targets
     init: |
       if test ! -e "pubspec.yaml"; then {
@@ -23,13 +31,7 @@ tasks:
       flutter pub get
       flutter run
 
-  - name: Install Android Studio
-    command: |
-      sudo add-apt-repository ppa:maarten-fonville/android-studio -y
-      sudo apt update
-      sudo apt install android-studio -y
-      export ANDROID_HOME=/workspace/android-studio
-      export PATH=$PATH:$ANDROID_HOME/bin
+
 
 ports:
   - port: 5900
